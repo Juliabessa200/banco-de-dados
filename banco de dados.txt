@@ -1,0 +1,52 @@
+create table user(
+id_user int auto_increment,
+email varchar(50) not null,
+password varchar(8) not null,
+created date defult now(),
+updated date,
+primary key(id_user)
+):
+
+select * from user;
+select * email from user;
+select * email,password from user;
+
+insert into user
+(email, password)
+values ('bessajulia99@gmail.com' , '1211'),
+('geo@gmail.com', '1344'),
+('weve@gmail.com', '1366'),
+('kleb@gmail.com', '1355'),
+('juni@gmail.com', '1323');
+
+creat table post(
+id_user int auto_increment primary key,
+title varchar(20),
+description text,
+id_user int,
+foreign key(id_user) references user(id user)
+);
+
+insert into post
+(title,description, id_user)
+values
+('comida', 'adoro macarão', 1),
+('desenho', 'muito bom', 1),
+('serie', 'gosto muito' 1)
+('programação', 'não gosto' 1)
+('eu', 'gosto de dormir' 1)
+('festa', 'não gosto muito' 1)
+('vida', 'adoro minha vida' 1)
+('css', 'prefiro' 1)
+('vida', 'gosto dela' 1)
+('esporte', 'não gosto' 1)
+
+select *from post;
+select u.email, p.post;
+from post p join user u
+on  p.id_user = u.id user;
+
+create table user_roles(
+id_roles int outo_increment prymary key,
+nome varchar(16) not null
+);
